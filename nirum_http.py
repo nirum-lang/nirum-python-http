@@ -5,7 +5,7 @@ from six import string_types
 from six.moves import urllib
 
 __all__ = 'HttpTransport',
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 
 
 def url_endswith_slash(url):
