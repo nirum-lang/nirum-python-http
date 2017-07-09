@@ -1,6 +1,14 @@
 Nirum HTTP transport for Python
 ===============================
 
+.. image:: https://travis-ci.org/spoqa/nirum-python-http.svg?branch=master
+   :target: https://travis-ci.org/spoqa/nirum-python-http
+   :alt: Build status
+
+.. image:: https://badge.fury.io/py/nirum-http.svg
+   :target: https://pypi.org/project/nirum-http/
+   :alt: Latest PyPI version
+
 This package provides an HTTP transport for nirum-python_.
 
 .. code-block:: python
