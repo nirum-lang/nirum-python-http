@@ -45,5 +45,7 @@ class HttpTransport(Transport):
         try:
             content = response.json()
         except ValueError:
-            raise UnexpectedNirumResponseError(response.text)
+            raise UnexpectedNirumResponseError(
+                response.content if isinstance('', bytes) else response.text
+            )
         return response.ok, content

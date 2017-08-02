@@ -1,8 +1,8 @@
-from pytest import fixture
+from pytest import fixture, raises
 from requests import Session
 from requests_mock import Adapter
 
-from nirum_http import HttpTransport
+from nirum_http import HttpTransport, UnexpectedNirumResponseError
 
 
 @fixture
@@ -34,3 +34,21 @@ def test_call(fx_adapter, fx_session):
     )
     assert successful
     assert result == {'_type': 'point', 'x': 1.0, 'top': 2.0}
+
+
+def test_unexpected_nirum_response_error(fx_adapter, fx_session):
+    method_name = 'hello_world'
+    base_url = 'http://example.com/'
+    url = '{0}?method={1}'.format(base_url, method_name)
+    fx_adapter.register_uri('POST', url, text='Error message')
+    t = HttpTransport(base_url, session=fx_session)
+    with raises(UnexpectedNirumResponseError) as exc_info:
+        t.call(
+            method_name, payload={'name': 'John'},
+            service_annotations={},
+            method_annotations={},
+            parameter_annotations={}
+        )
+    exc = exc_info.value
+    assert exc.args == ('Error message',)
+    assert isinstance(exc.args[0], str)
