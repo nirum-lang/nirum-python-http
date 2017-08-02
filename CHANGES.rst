@@ -4,7 +4,8 @@ Changelog
 Version 0.1.1
 -------------
 
-To be released.
+- Fixed a bug that message of ``UnexpectedNirumResponseError`` was not a ``str``
+  but ``unicode`` in Python 2.
 
 
 Version 0.1.0
