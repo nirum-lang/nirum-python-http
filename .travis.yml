@@ -2,7 +2,7 @@ language: python
 python: [2.7, 3.4, 3.5, 3.6]
 install:
 - pip install tox-travis
-- mkdir "$HOME/bin"
+- mkdir -p "$HOME/bin"
 script:
 - tox -e devruntime
 - tox
