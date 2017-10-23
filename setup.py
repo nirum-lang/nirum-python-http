@@ -78,6 +78,7 @@ setup(
     description='Nirum HTTP transport for Python',
     long_description=readme(),
     url='https://github.com/spoqa/nirum-python-http',
+    bugtrack_url='https://github.com/spoqa/nirum/issues',
     author='Kang Hyojun',
     author_email='iam.kanghyojun' '@' 'gmail.com',
     license='MIT license',
