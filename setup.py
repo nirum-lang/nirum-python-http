@@ -48,8 +48,11 @@ install_requires = [
 tests_require = [
     'flake8-import-order >= 0.12, < 1.0',
     'flake8-import-order-spoqa >= 1.0.0, < 2.0.0',
+    # flake8 does not yet support pycodestyle 2.4.0.
+    # Can be remove after this issue is fixed: https://gitlab.com/pycqa/flake8/issues/415
+    'pycodestyle >= 2.0, < 2.4.0',
     'pytest >= 3.1.2, < 4.0.0',
-    'pytest-flake8 >= 0.8.1, < 1.0.0',
+    'pytest-flake8 >= 0.9.0, < 1.0.0',
     'requests-mock >= 1.3.0, < 1.4.0',
 ]
 extras_require = {
@@ -77,8 +80,8 @@ setup(
     version=get_version(),
     description='Nirum HTTP transport for Python',
     long_description=readme(),
-    url='https://github.com/spoqa/nirum-python-http',
-    bugtrack_url='https://github.com/spoqa/nirum/issues',
+    url='https://github.com/nirum-lang/nirum-python-http',
+    bugtrack_url='https://github.com/nirum-lang/nirum/issues',
     author='Kang Hyojun',
     author_email='iam.kanghyojun' '@' 'gmail.com',
     license='MIT license',
