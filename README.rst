@@ -1,8 +1,8 @@
 Nirum HTTP transport for Python
 ===============================
 
-.. image:: https://travis-ci.org/spoqa/nirum-python-http.svg?branch=master
-   :target: https://travis-ci.org/spoqa/nirum-python-http
+.. image:: https://api.travis-ci.com/nirum-lang/nirum-python-http.svg?branch=master
+   :target: https://travis-ci.com/nirum-lang/nirum-python-http
    :alt: Build status
 
 .. image:: https://badge.fury.io/py/nirum-http.svg
@@ -30,7 +30,7 @@ a `session object`_ as well:
    session.auth = ('user', 'password')
    transport = HttpTransport('https://service-host/', session=session)
 
-.. _nirum-python: https://github.com/spoqa/nirum-python
+.. _nirum-python: https://github.com/nirum-lang/nirum-python
 .. _requests: http://python-requests.org/
 .. _session object: http://docs.python-requests.org/en/master/user/advanced/#session-objects
 
